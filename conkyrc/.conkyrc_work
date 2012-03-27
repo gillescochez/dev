@@ -1,0 +1,89 @@
+background yes
+use_xft yes
+xftfont Sans:size=8
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent no
+own_window_type desktop
+double_buffer yes
+minimum_size 200 165
+maximum_width 165
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color white
+default_shade_color black
+default_outline_color white
+alignment top_left
+gap_x 10
+gap_y 10
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+TEXT
+${font sans-serif:normal:size=20}$alignc${time %H:%M}
+${font sans-serif:normal:size=10}$alignc${time %a %e %b %G}
+
+${font sans-serif:bold:size=8}SYSTEM ${hr 2}
+${font sans-serif:normal:size=8}Kernel: $alignr$kernel
+Uptime: $alignr$uptime
+
+${font sans-serif:bold:size=8}CPU1 ${hr 2}
+${font sans-serif:normal:size=8}${cpu cpu1}% ${cpubar cpu1}
+${cpugraph cpu1}
+${font sans-serif:bold:size=8}CPU2 ${hr 2}
+${font sans-serif:normal:size=8}${cpu cpu2}% ${cpubar cpu2}
+${font sans-serif:normal:size=8}${cpugraph cpu2}
+${font sans-serif:bold:size=8}CPU3${hr 2}
+${font sans-serif:normal:size=8}${cpu cpu3}% ${cpubar cpu3}
+${font sans-serif:normal:size=8}${cpugraph cpu3}
+${font sans-serif:bold:size=8}CPU4 ${hr 2}
+${font sans-serif:normal:size=8}${cpu cpu4}% ${cpubar cpu4}
+${font sans-serif:normal:size=8}${cpugraph cpu4}
+${font sans-serif:bold:size=8}CPU5 ${hr 2}
+${font sans-serif:normal:size=8}${cpu cpu5}% ${cpubar cpu5}
+${font sans-serif:normal:size=8}${cpugraph cpu5}
+${font sans-serif:bold:size=8}CPU6 ${hr 2}
+${font sans-serif:normal:size=8}${cpu cpu6}% ${cpubar cpu6}
+${font sans-serif:normal:size=8}${cpugraph cpu6}
+${font sans-serif:bold:size=8}CPU7 ${hr 2}
+${font sans-serif:normal:size=8}${cpu cpu7}% ${cpubar cpu7}
+${font sans-serif:normal:size=8}${cpugraph cpu7}
+${font sans-serif:bold:size=8}CPU8 ${hr 2}
+${font sans-serif:normal:size=8}${cpu cpu8}% ${cpubar cpu8}
+${font sans-serif:normal:size=8}${cpugraph cpu8}
+
+${font sans-serif:bold:size=8}MEMORY ${hr 2}
+${font sans-serif:normal:size=8}$mem / $memmax $alignr $memperc%
+$membar
+$memgraph
+
+${font sans-serif:bold:size=8}HARD DRIVE ${hr 2}
+${font sans-serif:normal:size=8}${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${fs_bar /}
+$diskiograph
+
+${font sans-serif:bold:size=8}TOP PROCESSES ${hr 2}
+${font sans-serif:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
+${top_mem name 2}${alignr}${top mem 2} %
+$font${top_mem name 3}${alignr}${top mem 3} %
+$font${top_mem name 4}${alignr}${top mem 4} %
+$font${top_mem name 5}${alignr}${top mem 5} %
+$font${top_mem name 6}${alignr}${top mem 6} %
+$font${top_mem name 7}${alignr}${top mem 7} %
+$font${top_mem name 8}${alignr}${top mem 8} %
+$font${top_mem name 9}${alignr}${top mem 9} %
+
+#${font sans-serif:bold:size=8}NETWORK ${hr 2}
+#${font sans-serif:normal:size=8}IP address: $alignr ${addr ath0}
+#ESSID: $alignr ${wireless_essid ath0}
+#Connection quality: $alignr ${wireless_link_qual_perc ath0}%
+#${downspeedgraph ath0}
+#DLS:${downspeed ath0} kb/s $alignr total: ${totaldown ath0}
+#${upspeedgraph ath0}
+#ULS:${upspeed ath0} kb/s $alignr total: ${totalup ath0}
